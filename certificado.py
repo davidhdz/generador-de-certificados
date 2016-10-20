@@ -39,8 +39,7 @@ def generar(reemplazos,rol,cedula,nombre,contador):
     certsalida = cedula+'-'+rol+'.pdf'					#Nombre del certificado pdf final
 
     print("Generando certificado de " + rol + " para " + nombre)
-    x = Popen(['/usr/bin/inkscape', nombretmp, '-A', certsalida])	#Generación del certificado final
-    x = Popen(['/usr/bin/inkscape', nombretmp, '-A', certsalidat])	#Generación del certificado temporal
+    x = Popen(['/usr/bin/inkscape', nombretmp, '-A', certsalidat])	#Generación del certificado temporal.
 
     print("Añadiendo programa al certificado ")
     time.sleep(5)
