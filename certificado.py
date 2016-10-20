@@ -66,9 +66,6 @@ def main():
                 if row[3]=='2':
                     rol = 'asistente'
         # Variables de sustitución: Nombre, cédula, rol, título del evento (1ra línea), título del evento (2da línea) y fecha
-        #        reemplazos = {'Nombre_Participante':nombre, 'cedula':cedula, 'Rol':'Por su participación como <tspan font-weight = "bold" font-style = "italic">' + rol + '</tspan>', 'Evento':'Taller: La colonialidad del Capitalismo Cognitivo,', 'subtitulo':'Geopolítica del Conocimiento y Propiedad Intelectual','Fecha':'Mérida, 7 y 8 de noviembre de 2016'}
-        #        reemplazos = {'Nombre_Participante':nombre, 'cedula':cedula, 'Rol':'Por su participación como <tspan font-weight = "bold" font-style = "italic">' + rol + '</tspan>', 'Evento':'Foro: Investigación y desarrollo en Tecnologías Libres:', 'subtitulo':'Presente y futuro','Fecha':'Mérida, 9 de noviembre de 2016'}
-        #        reemplazos = {'Nombre_Participante':nombre, 'cedula':cedula, 'Rol':'Por su participación como <tspan font-weight = "bold" font-style = "italic">' + rol + '</tspan>', 'Evento':'VI Jornadas', 'subtitulo':'Pertinencia Social de las Tecnologías Libres: Experiencias','Fecha':'Mérida, 17 y 18 de noviembre de 2016'}
                 reemplazos = {'Nombre_Participante':nombre, 'cedula':cedula, 'Rol':'Por su participación como <tspan font-weight = "bold" font-style = "italic">' + rol + '</tspan>', 'Evento':'PyTatuy 2016', 'subtitulo':'4to Día Python de Mérida','Fecha':'Mérida, 12 y 13 de febrero de 2016'}
 
                 contador = contador + 1                                 #Contador que se agrega al nombre temporal del svg
