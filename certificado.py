@@ -34,14 +34,13 @@ def generar(reemplazos,rol,cedula,nombre,contador):
             for src, target in reemplazos.iteritems():
                 line = line.replace(src, target)
             salida.write(line)
-
     entrada.close()
     salida.close()
 
     certsalidat = '/tmp/'+cedula+'-'+rol+'.pdf'         #Nombre de pdf temporal
     certsalida = cedula+'-'+rol+'.pdf'					#Nombre del certificado pdf final
 
-    print("Generando certificado de " + rol + " para " + nombre)
+    print(str(contador) + " Generando certificado de " + rol + " para " + nombre)
     x = Popen(['/usr/bin/inkscape', nombretmp, '-A', certsalidat])  #Generación del certificado temporal.
 
     print("Añadiendo programa al certificado ")
@@ -58,8 +57,10 @@ def main():
     try:
         contador = 0
         with open('participantes.csv', 'r') as listado: #Lectura de participantes
-            datos = csv.reader(listado, delimiter=',')
+            datos = csv.reader(listado, delimiter=';')
             for row in datos:
+                if row[0].startswith('#'):              #Permite comentar líneas en el archivo csv
+                    continue
                 nombre = row[0]                         #Columna 1 corresponden a Nombre y Apellido
                 cedula = row[1]							#Columna 2 corresponde a la cédula
                 if row[3]=='0':							#Columna 4 corresponde a un código de participación
@@ -74,6 +75,7 @@ def main():
                 contador = contador + 1                 #Contador que se agrega al nombre temporal del svg
                 generar(reemplazos,rol,cedula,nombre,contador)  #Función de generación de certificados
         listado.close()
+        print("\nTotal de certificados generados: " + str(contador))
     except KeyboardInterrupt:
         print "Interrupción por teclado."
     except Exception:

@@ -23,12 +23,12 @@ Para el funcionamiento del script debe tener instalado:
 certificado.svg
 
 #### Lista de participantes
-`participantes.csv` es un archivo de texto plano que contiene la tabla de participantes y sus datos. El formato es el siguiente:
+`participantes.csv` es un archivo de texto plano que contiene la tabla de participantes y sus datos separados por punto y coma (;). El formato es el siguiente:
 
 ```
-Fulano de Tal,00000001,correo1@correo.com,1
-Zutano de Tal,00000002,correo2@correo.com.ve,0
-Mengano de Tal,00000003,correo3@correo.com,2
+Fulano de Tal;00000001;fulano@correo.com;1
+Zutano de Tal;00000002;zutano@correo.com.ve;0
+Mengano de Tal;00000003;mengano@correo.com;2
 ```
 Donde, la primera columna va el(los) nombre(s) y apellido(s), en la segunda la cédula de identidad o carnet de identificación, la tercera columna contiene la dirección de correo electrónico, esto para efectos de tener una dirección a donde enviar el certificado, y en la última columna un valor entero entre 0 y 2.
 

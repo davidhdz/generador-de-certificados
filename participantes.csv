@@ -1,3 +1,4 @@
-Fulano de Tal,00000001,correo1@correo.com,1
-Zutano de Tal,00000002,correo2@correo.com.ve,0
-Mengano de Tal,00000003,correo3@correo.com,2
+Fulano de Tal;00000001;correo1@correo.com;1
+Zutano de Tal;00000002;correo2@correo.com.ve;0
+#comentarios inician con numeral
+Mengano de Tal;00000003;correo3@correo.com;2
