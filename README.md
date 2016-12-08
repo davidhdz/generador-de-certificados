@@ -1,4 +1,4 @@
-# generador-de-certificados
+﻿# generador-de-certificados
 Generador en masa de certificados en pdf
 
 ----
@@ -28,6 +28,7 @@ certificado.svg
 ```
 Fulano de Tal;00000001;fulano@correo.com;1
 Zutano de Tal;00000002;zutano@correo.com.ve;0
+#comentarios inician con numeral 
 Mengano de Tal;00000003;mengano@correo.com;2
 ```
 Donde, la primera columna va el(los) nombre(s) y apellido(s), en la segunda la cédula de identidad o carnet de identificación, la tercera columna contiene la dirección de correo electrónico, esto para efectos de tener una dirección a donde enviar el certificado, y en la última columna un valor entero entre 0 y 2.
